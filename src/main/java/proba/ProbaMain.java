@@ -2,13 +2,28 @@ package proba;
 
 public class ProbaMain {
 
+    public static int age;
+
+    static {
+        kiir();
+        age = 45;
+
+    }
+
+    public String printHello(String message){
+        return message + kiir() ;
+    }
+
+    public static String  kiir(){
+        Hombre hombre = new Hombre("Diego", 42);
+        return hombre.toString();
+    }
+
+
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder("hello");
-        sb.append(" Bibo");
-        Hombre bibi = new Hombre("Bibi", 47);
+        ProbaMain probaMain = new ProbaMain();
+        System.out.println(probaMain.printHello("hello "));
 
-        System.out.println(sb.toString().equals("hello Bibo"));
 
-        System.out.println("Hello "+ bibi);
     }
 }
