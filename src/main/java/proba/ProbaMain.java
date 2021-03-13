@@ -1,28 +1,17 @@
 package proba;
 
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ProbaMain {
-
-    public static int age;
-
-    static {
-        kiir();
-        age = 45;
-
-    }
-
-    public String printHello(String message){
-        return message + kiir() ;
-    }
-
-    public static String  kiir(){
-        Hombre hombre = new Hombre("Diego", 42);
-        return hombre.toString();
-    }
 
 
     public static void main(String[] args) {
-        ProbaMain probaMain = new ProbaMain();
-        System.out.println(probaMain.printHello("hello "));
+
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+        System.out.println(numbers.get(3));
 
 
     }
